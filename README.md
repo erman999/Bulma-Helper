@@ -1,5 +1,5 @@
-# JavaScript for Bulma CSS Framework
-Bulma package does not come with any JavaScript file. This repository provides JavaScript for Bulma.
+# JavaScript for Bulma
+Bulma package does not come with any JavaScript file. This repository provides JavaScript for Bulma CSS Framework.
 
 
 ### Navbar 
@@ -15,23 +15,36 @@ $navbars.forEach((el, i) => {
     el.querySelector('.navbar-menu').classList.toggle('is-active');
   });
 });
+
+// Navbar close on outside click
+document.addEventListener('click', (evt) => {
+  $navbars.forEach((el, i) => {
+    console.log(el);
+    if (!el.contains(evt.target)) {
+      console.log(true);
+      el.querySelector('.navbar-menu').classList.remove('is-active');
+    }
+  });
+});
 ```
 
 ### Navbar Dropdown Open/Close on Click
 ```js
 // Navbar dropdown open/close on click
 let $navbarDropdowns = document.querySelectorAll('.has-dropdown');
+console.log($navbarDropdowns);
 $navbarDropdowns.forEach((el, i) => {
   el.addEventListener('click', () => {
     el.classList.toggle('is-active');
+    el.querySelector('.navbar-dropdown').classList.toggle('is-block');
   });
 });
 
 // Navbar dropdown close on outside click
 document.addEventListener('click', (evt) => {
-  $navbarDropdowns.forEach((item, i) => {
-    if (!item.contains(evt.target)) {
-      item.classList.remove('is-active');
+  $navbarDropdowns.forEach((el, i) => {
+    if (!el.contains(evt.target)) {
+      el.classList.remove('is-active');
     }
   });
 });

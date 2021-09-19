@@ -26,7 +26,7 @@ document.addEventListener('click', (evt) => {
 });
 ```
 
-### Navbar Dropdown Open/Close on Click
+### Navbar-Dropdown Open/Close on Click
 ```js
 let $navbarDropdowns = document.querySelectorAll('.has-dropdown');
 $navbarDropdowns.forEach((el, i) => {

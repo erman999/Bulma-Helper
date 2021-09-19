@@ -3,7 +3,7 @@ Bulma package does not come with any JavaScript file. This repository provides J
 
 
 ### Navbar 
-Bulma package provides JavaScript only for navbar but it requires `target - id` match (e.g. `data-target="my-navbar"` and `id="my-navbar"`). I don't like to match things by myself. Use code below to get rid of `target`, `id` match for navbars
+Bulma package provides JavaScript only for navbar but it requires `target - id` match (e.g. `data-target="my-navbar"` and `id="my-navbar"`). If you do not like to match things by yourself. Use code below to get rid of `target`, `id` match for navbars
 
 
 ```js

@@ -49,3 +49,13 @@ document.addEventListener('click', (evt) => {
 });
 ```
 
+Dropdowns in navbar always open for mobile. If you want to open/close navbar dropdowns for mobile, you need to add this css to your own style. Don't forget this stlye must be used after `bulma.css`.
+```css
+/* Hide dropdown items on mobile */
+@media screen and (max-width: 1024px) {
+  .navbar-dropdown {
+    display: none;
+  }
+}
+```
+

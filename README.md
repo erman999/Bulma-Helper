@@ -19,9 +19,7 @@ $navbars.forEach((el, i) => {
 // Navbar close on outside click
 document.addEventListener('click', (evt) => {
   $navbars.forEach((el, i) => {
-    console.log(el);
     if (!el.contains(evt.target)) {
-      console.log(true);
       el.querySelector('.navbar-menu').classList.remove('is-active');
     }
   });
@@ -32,7 +30,6 @@ document.addEventListener('click', (evt) => {
 ```js
 // Navbar dropdown open/close on click
 let $navbarDropdowns = document.querySelectorAll('.has-dropdown');
-console.log($navbarDropdowns);
 $navbarDropdowns.forEach((el, i) => {
   el.addEventListener('click', () => {
     el.classList.toggle('is-active');

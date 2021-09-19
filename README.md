@@ -1,5 +1,5 @@
-# BulmaJS
-BulmaJS is a JavaScript provider for Bulma CSS framework. Official Bulma package does not come with any JavaScript file. So you need to write it by yourself. This repository provides missing JavaScript for Bulma. It's compatible with Bulma `v0.9.3` and all codes in vanilla JavaScript. You don't need jQuery or any other dependencies. This is an unofficial repository.
+# JavaScript for Bulma
+This repository is a JavaScript provider for Bulma CSS framework. Official Bulma package does not come with any JavaScript file. So you need to write it by yourself. This repository provides missing JavaScript for Bulma. It's compatible with Bulma `v0.9.3` and all codes in vanilla JavaScript. You don't need jQuery or any other dependencies. This is an unofficial repository.
 
 
 ### Navbar 

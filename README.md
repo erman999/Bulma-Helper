@@ -88,6 +88,7 @@ $modals.forEach((el, i) => {
     let target = el.dataset.modal;
     let modal = document.getElementById(target);
     if (modal != null) {
+      document.querySelector('html').classList.toggle('is-clipped');
       modal.classList.toggle('is-active');
     } else {
       console.error(target + ' could not find. Be sure, you have `id="'+target+'"` for your modal.');

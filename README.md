@@ -7,7 +7,7 @@ Bulma shares JavaScript only for navbar element but it requires `data-target` an
 
 
 ```js
-// Navbar open/close without target - id match
+// Navbar open/close (does not require id)
 const $navbars = document.querySelectorAll('.navbar');
 $navbars.forEach((el, i) => {
   const $burgers = el.querySelector('.navbar-burger');
@@ -28,7 +28,7 @@ document.addEventListener('click', (evt) => {
 
 ### Navbar Dropdown Open/Close on Click
 ```js
-// Navbar dropdown open/close on click
+// Navbar-Dropdown open/close on click
 let $navbarDropdowns = document.querySelectorAll('.has-dropdown');
 $navbarDropdowns.forEach((el, i) => {
   el.addEventListener('click', () => {
@@ -37,7 +37,7 @@ $navbarDropdowns.forEach((el, i) => {
   });
 });
 
-// Navbar dropdown close on outside click
+// Navbar-Dropdown close on outside click
 document.addEventListener('click', (evt) => {
   $navbarDropdowns.forEach((el, i) => {
     console.log(el);

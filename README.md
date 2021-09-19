@@ -77,3 +77,56 @@ document.addEventListener('click', (evt) => {
 });
 ```
 
+### Modal
+Working with modal windows requires `data` and `id` attributes. We will be using `data-modal` attribute for open and close modal window. 
+
+```js
+// Modal open/close on click
+let $modals = document.querySelectorAll('[data-modal]');
+$modals.forEach((el, i) => {
+  console.log(el);
+  el.addEventListener('click', () => {
+    let target = el.dataset.modal;
+    let modal = document.getElementById(target);
+    if (modal != null) {
+      modal.classList.toggle('is-active');
+    } else {
+      console.error(target + ' could not find. Be sure, you have `id="'+target+'"` for your modal.');
+    }
+  });
+});
+```
+
+#### Simple Modal Example
+
+> To open modal window add `data-modal="myModal"` attribute to a button.
+
+> Also we will use `data-modal="myModal"` attribute for other elements to close modal. Check examples below.
+
+> To close modal when clicked backgroud check `<div data-modal="myModal" class="modal-background"></div>`
+
+> To close modal with `x` button on top right check `<button data-modal="myModal" class="delete"></button>`
+
+> To close modal with `Cancel` button check `<button data-modal="myModal" class="button">Cancel</button>`
+
+```html
+<button data-modal="myModal" class="button is-link">Open Modal</button>
+
+<div id="myModal" class="modal">
+  <div data-modal="myModal" class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button data-modal="myModal" class="delete"></button>
+    </header>
+    <section class="modal-card-body">
+      Here is modal body
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Save changes</button>
+      <button data-modal="myModal" class="button">Cancel</button>
+    </footer>
+  </div>
+</div>
+```
+

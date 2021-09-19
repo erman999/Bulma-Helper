@@ -1,5 +1,5 @@
 # JavaScript for Bulma
-Bulma package does not come with any JavaScript file. This repository provides JavaScript for Bulma CSS Framework.
+Bulma package does not come with any JavaScript file. This repository provides JavaScript for Bulma CSS Framework. It's fully compatible with Bulma v0.9.3. All codes in vanilla JavaScript. You don't need jQuery or other dependencies. Enjoy.
 
 
 ### Navbar 

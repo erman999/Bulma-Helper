@@ -7,13 +7,33 @@ Bulma package provides JavaScript only for navbar but it requires `target - id` 
 
 
 ```js
-document.addEventListener('DOMContentLoaded', () => {
-  const $navbars = document.querySelectorAll('.navbar');
-  $navbars.forEach((el, i) => {
-    const $burgers = el.querySelector('.navbar-burger');
-    $burgers.addEventListener('click', () => {
-      el.querySelector('.navbar-menu').classList.toggle('is-active');
-    });
+// Navbar open/close without target - id match
+const $navbars = document.querySelectorAll('.navbar');
+$navbars.forEach((el, i) => {
+  const $burgers = el.querySelector('.navbar-burger');
+  $burgers.addEventListener('click', () => {
+    el.querySelector('.navbar-menu').classList.toggle('is-active');
   });
 });
 ```
+
+### Navbar Dropdown Open/Close on Click
+```js
+// Navbar dropdown open/close on click
+let $navbarDropdowns = document.querySelectorAll('.has-dropdown');
+$navbarDropdowns.forEach((el, i) => {
+  el.addEventListener('click', () => {
+    el.classList.toggle('is-active');
+  });
+});
+
+// Navbar dropdown close on outside click
+document.addEventListener('click', (evt) => {
+  $navbarDropdowns.forEach((item, i) => {
+    if (!item.contains(evt.target)) {
+      item.classList.remove('is-active');
+    }
+  });
+});
+```
+

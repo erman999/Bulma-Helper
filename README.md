@@ -8,9 +8,9 @@ Bulma shares JavaScript only for navbar element but it requires `data-target` an
 
 ```js
 // Navbar open/close (does not require id)
-const $navbars = document.querySelectorAll('.navbar');
+let $navbars = document.querySelectorAll('.navbar');
 $navbars.forEach((el, i) => {
-  const $burgers = el.querySelector('.navbar-burger');
+  let $burgers = el.querySelector('.navbar-burger');
   $burgers.addEventListener('click', () => {
     el.querySelector('.navbar-menu').classList.toggle('is-active');
   });
@@ -57,5 +57,25 @@ document.addEventListener('click', (evt) => {
     display: none;
   }
 }
+```
+
+### Dropdown
+```
+// Dropdown open/close on click
+let $dropdowns = document.querySelectorAll('.dropdown');
+$dropdowns.forEach((el, i) => {
+  el.addEventListener('click', () => {
+    el.classList.toggle('is-active');
+  });
+});
+
+// Dropdown close on outside click
+document.addEventListener('click', (evt) => {
+  $dropdowns.forEach((el, i) => {
+    if (!el.contains(evt.target)) {
+      el.classList.remove('is-active');
+    }
+  });
+});
 ```
 

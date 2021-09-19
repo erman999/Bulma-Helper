@@ -84,7 +84,6 @@ Working with modal windows requires `data` and `id` attributes. We will be using
 // Modal open/close on click
 let $modals = document.querySelectorAll('[data-modal]');
 $modals.forEach((el, i) => {
-  console.log(el);
   el.addEventListener('click', () => {
     let target = el.dataset.modal;
     let modal = document.getElementById(target);

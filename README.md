@@ -1,9 +1,9 @@
-# JavaScript for Bulma
-Bulma package does not come with any JavaScript file. This repository provides JavaScript for Bulma CSS Framework. It's fully compatible with Bulma v0.9.3. All codes in vanilla JavaScript. You don't need jQuery or other dependencies. Enjoy.
+# BulmaJS
+BulmaJS is a JavaScript provider for Bulma CSS framework. Official Bulma website tells us Bulma package does not come with any JavaScript file. So you need to write it by yourself. This repository provides missing JavaScript for Bulma. It's compatible with Bulma `v0.9.3` and all codes in vanilla JavaScript. You don't need jQuery or any other dependencies. 
 
 
 ### Navbar 
-Bulma package provides JavaScript only for navbar but it requires `target - id` match (e.g. `data-target="my-navbar"` and `id="my-navbar"`). If you do not like to match things by yourself. Use code below to get rid of `target`, `id` match for navbars
+Bulma shares JavaScript only for navbar element but it requires `data-target` and `id` match. If you want to use it without giving id manullay here is an alternative way to make it automatic.
 
 
 ```js

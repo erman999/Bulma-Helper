@@ -40,7 +40,9 @@ $navbarDropdowns.forEach((el, i) => {
 // Navbar dropdown close on outside click
 document.addEventListener('click', (evt) => {
   $navbarDropdowns.forEach((el, i) => {
+    console.log(el);
     if (!el.contains(evt.target)) {
+      el.querySelector('.navbar-dropdown').classList.remove('is-block');
       el.classList.remove('is-active');
     }
   });

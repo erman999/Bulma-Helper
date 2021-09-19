@@ -28,19 +28,17 @@ document.addEventListener('click', (evt) => {
 
 ### Navbar Dropdown Open/Close on Click
 ```js
-// Navbar-Dropdown open/close on click
 let $navbarDropdowns = document.querySelectorAll('.has-dropdown');
 $navbarDropdowns.forEach((el, i) => {
   el.addEventListener('click', () => {
-    el.classList.toggle('is-active');
     el.querySelector('.navbar-dropdown').classList.toggle('is-block');
+    el.classList.toggle('is-active');
   });
 });
 
 // Navbar-Dropdown close on outside click
 document.addEventListener('click', (evt) => {
   $navbarDropdowns.forEach((el, i) => {
-    console.log(el);
     if (!el.contains(evt.target)) {
       el.querySelector('.navbar-dropdown').classList.remove('is-block');
       el.classList.remove('is-active');

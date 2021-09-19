@@ -58,7 +58,7 @@ document.addEventListener('click', (evt) => {
 ```
 
 ### Dropdown
-```
+```js
 // Dropdown open/close on click
 let $dropdowns = document.querySelectorAll('.dropdown');
 $dropdowns.forEach((el, i) => {
